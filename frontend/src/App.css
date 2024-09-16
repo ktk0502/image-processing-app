@@ -1,0 +1,156 @@
+.App {
+  background: radial-gradient(circle, #17826e 10%, black 100%);
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
+.upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000; /* Black color */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-button input {
+  display: none; /* Hide the default file input */
+}
+
+.upload-button:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+
+.cropper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crop-button {
+  background-color: #000000; /* Black color */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.crop-button:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+
+.download-button {
+  background-color: #000000; /* Black color */
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+
+.image-editor-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: radial-gradient(circle, #17826e 10%, black 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white; /* Ensure text is visible on darker background */
+}
+
+.control label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff; /* White text */
+  flex-basis: 100px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #000000, #ffffff); /* Black to white gradient */
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #000000; /* Black thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #000000; /* Black thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #000000; /* Black thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-track,
+.slider::-webkit-slider-runnable-track,
+.slider::-ms-track {
+  background: white; /* White track */
+  border: none;
+  height: 8px;
+}
+
+.control span {
+  flex-basis: 50px;
+  text-align: right;
+  color: white; /* White text */
+}

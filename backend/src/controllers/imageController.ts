@@ -40,7 +40,7 @@ export const processImage = async (req: Request, res: Response) => {
     res.set('Content-Type', `image/${outputFormat}`);
     res.send(processedImageBuffer);
 
-    await fs.unlink(imagePath);
+    // await fs.unlink(imagePath);
   } catch (error) {
     console.error('Error processing image:', error);
     res.status(500).json({ error: 'Internal Server Error' });
