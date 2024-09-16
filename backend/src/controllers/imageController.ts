@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import sharp from 'sharp';
 import path from 'path';
-import fs from 'fs/promises'; // Promisified fs module for async file deletion
+import fs from 'fs/promises'; 
 
 export const processImage = async (req: Request, res: Response) => {
   try {
@@ -13,7 +13,7 @@ export const processImage = async (req: Request, res: Response) => {
     }
 
     const brightnessValue = parseFloat(brightness) / 100;
-    const contrastValue = (parseFloat(contrast)) / 100; // Linear adjustment, 100 is neutral
+    const contrastValue = (parseFloat(contrast)) / 100; 
     const rotationValue = parseInt(rotation, 10);
     const saturationValue = parseFloat(saturation) / 100;
 

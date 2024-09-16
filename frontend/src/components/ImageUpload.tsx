@@ -9,7 +9,7 @@ const ImageUpload: React.FC = () => {
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? e.target.files[0] : null;
     if (file) {
-      await handleImageUpload(file); // This will generate the preview immediately
+      await handleImageUpload(file);
     }
   };
 
@@ -17,7 +17,7 @@ const ImageUpload: React.FC = () => {
     const fileInput = document.querySelector<HTMLInputElement>('input[type="file"]');
     if (fileInput && fileInput.files) {
       const file = fileInput.files[0];
-      await fetchCroppedImage(file); // This will crop the image and set the cropped image URL
+      await fetchCroppedImage(file); 
     }
   };
 

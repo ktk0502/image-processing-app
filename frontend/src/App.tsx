@@ -12,16 +12,12 @@ const App: React.FC = () => {
     <ImageProvider>
       <div className="App">
         <h1>Image Processing App</h1>
-        {/* Step 1: Upload the image */}
         <ImageUpload />
-        
-        {/* Step 2: Edit the uploaded image (Brightness, Contrast, etc.) */}
+      
         <ImageEditor />
         
-        {/* Step 3: Crop the image */}
         <CropperComponent/>
         
-        {/* Step 4: Download the processed image */}
         <DownloadButton />
       </div>
     </ImageProvider>

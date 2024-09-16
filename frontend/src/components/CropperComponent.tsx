@@ -16,7 +16,6 @@ const CropperComponent: React.FC = () => {
         const croppedImageDataUrl = croppedCanvas.toDataURL('image/jpeg');
         setFinalCroppedImageUrl(croppedImageDataUrl);
 
-        // Optionally download the cropped image immediately after cropping
         const link = document.createElement('a');
         link.href = croppedImageDataUrl;
         link.download = 'cropped-image.jpg';

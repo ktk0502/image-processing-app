@@ -9,17 +9,14 @@ const ImageEditor: React.FC = () => {
   const [saturation, setSaturation] = useState(100);
   const [rotation, setRotation] = useState(0);
 
-  // Function to apply filters (for visual feedback in the preview only)
   const applyFilters = () => ({
     filter: `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturation}%)`,
     transform: `rotate(${rotation}deg)`,
   });
 
-  // Function to apply final filters to the image
   const applyFinalFilters = async () => {
     if (preview) {
       try {
-        // Assuming processImage returns a Promise<string>
         const processedImageUrl : any  = await processImage(preview, {
           brightness,
           contrast,
@@ -27,7 +24,6 @@ const ImageEditor: React.FC = () => {
           rotation,
         });
   
-        // Update finalTransformedImageUrl with the processed image URL
         setFinalTransformedImageUrl(processedImageUrl);
       } catch (error) {
         console.error('Error applying filters:', error);
@@ -43,7 +39,7 @@ const ImageEditor: React.FC = () => {
           <img
             src={preview}
             alt="Preview"
-            style={applyFilters()} // Apply filters to the image for visual feedback
+            style={applyFilters()} 
             className="image-preview"
           />
           <div className="controls">
